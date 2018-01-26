@@ -1,0 +1,59 @@
+body {
+	background-image: url(../images/background.jpg);
+}
+
+#header {
+	text-align: center;
+}
+
+#randomValue {
+	background-color: white;
+	color: green;
+	font-weight: bolder;
+	font-size: 30px;
+	height: 150px;
+	padding: 50px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#winLoss {
+	background-color: green;
+	color: white;
+	font-weight: bold;
+	height: 150px;
+	padding: 15px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
+.jumbotron {
+	text-align: center;
+	background-color: black;
+}
+
+h1 {
+	color: green;
+	background-color: white;
+	padding: 10px;
+}
+
+p {
+	color: white;
+}
+
+h4 {
+	background-color: green;
+	color: white;
+	padding: 20px;
+}
+
+#totalScoreBox {
+	background-color: white;
+	color: green;
+	font-size: 30px;
+	height: 100px;
+	padding: 35px;
+	margin-bottom: 20px;
+	text-align: center;
+}
