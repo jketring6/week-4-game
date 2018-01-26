@@ -11,10 +11,14 @@ $(document).ready(function() {
 
 	function beginGame() {
 
+		var randomNumber = 0;
+
 		var max = 102;
 		var min = 19;
 
 		var randomCompNumber = Math.floor(Math.random() * max) + min;
+
+		randomNumber = randomCompNumber;
 
 		$("#randomValue").html(randomCompNumber);
 
@@ -28,10 +32,7 @@ $(document).ready(function() {
 
 		var picOne = 0;
 
-		var picMax = 11;
-		var picMin = 1;
-
-		var randomPicValue = Math.floor(Math.random() * picMax) + picMin;
+		var randomPicValue = Math.floor(Math.random() * 11) + 1;
 
 		var picOne = randomPicValue;
 
@@ -49,7 +50,7 @@ $(document).ready(function() {
 
 		var picTwo = 0;
 
-		var randomPicValue = Math.floor(Math.random() * 12) + 1;
+		var randomPicValue = Math.floor(Math.random() * 11) + 1;
 
 		var picTwo = randomPicValue;
 
@@ -67,7 +68,7 @@ $(document).ready(function() {
 
 		var picThree = 0;
 
-		var randomPicValue = Math.floor(Math.random() * 12) + 1;
+		var randomPicValue = Math.floor(Math.random() * 11) + 1;
 
 		var picThree = randomPicValue;
 
@@ -85,7 +86,7 @@ $(document).ready(function() {
 
 		var picFour = 0;
 
-		var randomPicValue = Math.floor(Math.random() * 12) + 1;
+		var randomPicValue = Math.floor(Math.random() * 11) + 1;
 
 		var picFour = randomPicValue;
 
@@ -103,7 +104,7 @@ $(document).ready(function() {
 
 		function checkScore() {
 
-			if (totalScore === randomCompNumber) {
+			if (totalScore === randomNumber) {
 
 				wins++;
 
@@ -117,7 +118,7 @@ $(document).ready(function() {
 
 			}
 
-			else if (totalScore > randomCompNumber) {
+			else if (totalScore > randomNumber) {
 
 				losses++;
 
@@ -131,15 +132,23 @@ $(document).ready(function() {
 		function resetGame() {
 
 			totalScore = 0;
+			picOne = 0;
+			picTwo = 0;
+			picThree = 0;
+			picFour = 0;
 
 			var max = 102;
 			var min = 19;
 
 			var randomCompNumber = Math.floor(Math.random() * max) + min;
 
-			$("#randomValue").html(randomCompNumber);
+			randomNumber = randomCompNumber;
+
+			$("#randomValue").html(randomNumber);
 
 			$("#totalScoreBox").html(totalScore)
+
+			beginGame();
 
 		}
 
